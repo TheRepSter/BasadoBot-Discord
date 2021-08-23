@@ -483,6 +483,7 @@ todasLasFrases = [
     "Vendo opel corsa",
     "Friendship ended with {nombreuser}, now {insertarnombre} is my best friend",
     "{nombreuser} tiene un cuerno de mamut",
+    "-¡Hola, {nombreuser}!\n+¡Hola, {insertarnombre}!\n-¿Vió usted a mi abuela?\n+A su abuela yo la ví.\n-Tengo fimosis"
 ]
 
 def generador_frase(nombreuser):
