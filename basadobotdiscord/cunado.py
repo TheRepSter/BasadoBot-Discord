@@ -475,10 +475,14 @@ todasLasFrases = [
     "A trabajar en una obra os ponía yo...",
     "No he entenido ni una palabra de toda esta jerga",
     "Con {insertarnombre} no había tantas chorradas",
-    "Busco novia, interesadas al DM.",
+    "{nombreuser} busca pareja, interesados al DM.",
     "Joder {pais} es mucho mas grande de lo que me imaginaba",
     "Con mi poderoso Mouse Gaming soy poderesisimo en el Ajedrez",
-    "Sabía que no me podía fiar de {insertarnombre}"
+    "Sabía que no me podía fiar de {insertarnombre}",
+    "Maduritas calientes en tu zona {nombreuser}",
+    "Vendo opel corsa",
+    "Friendship ended with {nombreuser}, now {insertarnombre} is my best friend",
+    "{nombreuser} tiene un cuerno de mamut",
 ]
 
 def generador_frase(nombreuser):
