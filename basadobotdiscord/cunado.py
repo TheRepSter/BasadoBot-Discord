@@ -477,7 +477,7 @@ todasLasFrases = [
     "Con {insertarnombre} no había tantas chorradas",
     "{nombreuser} busca pareja, interesados al DM.",
     "Joder {pais} es mucho mas grande de lo que me imaginaba",
-    "Con mi poderoso Mouse Gaming soy poderesisimo en el Ajedrez",
+    "Con mi poderoso Mouse Gaming soy poderosisimo en el Ajedrez",
     "Sabía que no me podía fiar de {insertarnombre}",
     "Maduritas calientes en tu zona {nombreuser}",
     "Vendo opel corsa",
