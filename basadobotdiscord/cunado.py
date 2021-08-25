@@ -483,7 +483,29 @@ todasLasFrases = [
     "Vendo opel corsa",
     "Friendship ended with {nombreuser}, now {insertarnombre} is my best friend",
     "{nombreuser} tiene un cuerno de mamut",
-    "-¡Hola, {nombreuser}!\n+¡Hola, {insertarnombre}!\n-¿Vió usted a mi abuela?\n+A su abuela yo la ví.\n-Tengo fimosis"
+    "-¡Hola, {nombreuser}!\n+¡Hola, {insertarnombre}!\n-¿Vió usted a mi abuela?\n+A su abuela yo la ví.\n-Tengo fimosis",
+    "Me han dicho que eres un boinudo espanyolista, ten cuidado",
+    "Los catalanes hacen cosas",
+    "Somos basados y tenemos bots en nuestro interior",
+    "Tenemos que hacer bots, que hagan más bots. Por que lo que nunca hará un bot es hacer más bots",
+    "BOTifler!",
+    "¿Ustedes piensan antes de basar o basan tras pensar?",
+    "A veces estamos pensando siempre en los basados, y al final los seres humanos somos sobre todo personas",
+    "Cuanto peor mejor para todos y cuanto peor para todos mejor, mejor para mí el suyo, beneficio basado",
+    "Es usted Ruiz, ruin, mezquino y miserable",
+    "Esto no es como el agua que cae del cielo, sin que se sepa exactamente por qué.",
+    "Exportar es positivo porque vendes lo que produces.",
+    "Hacemos lo que lo podemos significa lo que exactamente significa hacemos lo que lo podemos.",
+    "La cerámica de Talavera no es cosa menor, dicho de otra forma: es cosa mayor.",
+    "Las decisiones se toman en el momento de tomarse.",
+    "Lo que nosotros hemos hecho, cosa que no hizo usted, es engañar a la gente.",
+    "Lo único serio es ser serio.",
+    "No he dormido nada. No me pregunten demasiado si hacen el favor.",
+    "Por las carreteras tienen que ir coches y de los aeropuertos tienen que salir aviones.",
+    "Todo lo que se refiere a mí no es cierto, salvo alguna cosa que se ha publicado.",
+    "Un vaso es un vaso y un plato es un plato.",
+    "Una cosa es ser solidario, y otra es serlo a cambio de nada.",
+    "Vivo en el lío."
 ]
 
 def generador_frase(nombreuser):
