@@ -15,7 +15,7 @@ intents.members = True
 
 discord.MemberCacheFlags.from_intents(intents=intents)
 
-messageInfo=discord.Embed(title="¡Hola! ¡Soy un bot llamado BasadoBot!", description="He sido creado por @RepSter#6969, por simple diversión.\nCuento \"basados\", es decir, cuando estás de acuerdo con una persona.\nTambién llevo la cuenta de las píldoras que tiene cada usuario.\nLos comandos son los siguientes:", color=0xff0000)
+messageInfo=discord.Embed(title="¡Hola! ¡Soy un bot llamado BasadoBot!", description="He sido creado por @RepSter#2681, por simple diversión.\nCuento \"basados\", es decir, cuando estás de acuerdo con una persona.\nTambién llevo la cuenta de las píldoras que tiene cada usuario.\nLos comandos son los siguientes:", color=0xff0000)
 messageInfo.set_author(name="BasadoBot", url="https://github.com/TheRepSter/BasadoBot-Discord")
 messageInfo.add_field(name="b!info o b!help", value="Muestra este mensaje.", inline=False)
 messageInfo.add_field(name="b!masbasados", value="Muestra el top 10 de basados.", inline=False)
@@ -23,7 +23,7 @@ messageInfo.add_field(name="b!cantidaddebasado", value="Muestra los basados seg�
 messageInfo.add_field(name="b!frasecunada", value="Envia una frase de cuñado aleatoria.", inline=False)
 messageInfo.add_field(name="b!basado", value="Para basar a una persona", inline=False)
 messageInfo.add_field(name="Soy de código abierto, es decir, ¡puedes ver mi código e incluso aportar!", value=" ¡Dale click arriba del todo y entrarás en mi github!", inline=False)
-messageInfo.set_footer(text="¿Tienes alguna duda? ¡Habla por MD a mi creador!")
+messageInfo.set_footer(text="¿Tienes alguna duda? ¡Habla por MD con mi creador!")
 
 bot = commands.Bot(command_prefix="b!", help_command=None, intents=intents)
 
@@ -33,12 +33,12 @@ async def info(ctx):
 
 @bot.command(name="basado")
 async def basado(ctx, member: discord.Member = None):
-    if ctx.message.author.id == member.id:
-        await ctx.send("Eres tonto.")
-        return
-    
     if member == None:
         await ctx.send("Tienes que poner algun miembro.")
+        return
+
+    if ctx.message.author.id == member.id:
+        await ctx.send("Eres tonto.")
         return
         
     personaQueDaBasado = session.query(User).filter(User.userid == str(ctx.message.author.id), User.serverid == str(ctx.guild.id)).first()
