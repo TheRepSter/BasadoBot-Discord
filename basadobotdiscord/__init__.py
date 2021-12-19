@@ -74,7 +74,7 @@ async def cantidaddebasado(ctx, member:Option(discord.Member, "El miembro que qu
         member = ctx.author
     usuarioServer = session.query(User).filter(User.userid == str(member.id), User.serverid == str(ctx.guild.id)).first()
     if not usuarioServer:
-        usuarioServer = User(serverid = str(ctx.guild.id), userid = str(ctx.member.id), ultimobasado = 0, basados = 0)
+        usuarioServer = User(serverid = str(ctx.guild.id), userid = str(member.id), ultimobasado = 0, basados = 0)
         session.add(usuarioServer)
         session.commit()
     usuarioAll = session.query(User).filter(User.userid == str(member.id)).all()
