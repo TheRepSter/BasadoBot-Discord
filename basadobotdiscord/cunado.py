@@ -11,6 +11,7 @@ paises  = cargarLista("paises")
 frases  = cargarLista("frases")
 nombres = cargarLista("nombres")
 links   = cargarLista("links")
+imagenesCachondas = cargarLista("imagenesCachondas")
 
 def generador_frase(nombreuser):
     frase = choice(frases)
@@ -23,7 +24,8 @@ def generador_frase(nombreuser):
     frase = frase.replace("{nombreuser}", nombreuser)
     frase = frase.replace("{pais}", choice(paises))
     frase = frase.replace("{link}", choice(links))
-    frase = frase.replace("{br}", "\n\n")
+    frase = frase.replace("{br}", "\n")
+    frase = frase.replace("{imagencachondo}", choice(imagenesCachondas))
 
     frase = frase.strip()
 
