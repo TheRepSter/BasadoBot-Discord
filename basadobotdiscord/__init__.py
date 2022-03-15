@@ -1,10 +1,3 @@
-#Commands:
-#   - binfo
-#   - basado {[rec]user:Discord.user} {[def:None]pill:str}
-#   - bmasbasados
-#   - bcantidaddebasado {[def:userpost]user:Discord.user}
-#   - btirarpildora {[rec]pill:str}
-
 import discord
 from discord.ext import commands
 from discord import Option
@@ -91,6 +84,18 @@ async def cantidaddebasado(ctx, member:Option(discord.Member, "El miembro que qu
 async def frasecunada(ctx):
     message, links = generador_frase(ctx.author.display_name)
     await ctx.respond(content = message, view = ViewCuñado(ctx, ctx.author.display_name, links))
+
+@bot.slash_command(name="enpesetas", description="Para ver cuantas pesetas son tantos euros.")
+async def enpesetas(ctx, euros:Option(float, "Cantidad de euros.", required=True, default=None)):
+    pesetas = euros*166
+    if int(euros) != float(euros):
+        pesetas = round(pesetas, 2) 
+        euros = round(euros, 2)
+    else:
+        euros = int(euros)
+        pesetas = int(pesetas)
+    await ctx.respond(content = f"¿{euros}€? En mi epoca eso eran {pesetas} pesetas".replace(".", ","))
+
 
 def run(token):
     bot.run(token)
