@@ -87,14 +87,27 @@ async def frasecunada(ctx):
 
 @bot.slash_command(name="enpesetas", description="Para ver cuantas pesetas son tantos euros.")
 async def enpesetas(ctx, euros:Option(float, "Cantidad de euros.", required=True, default=None)):
-    pesetas = euros*166
-    if int(euros) != float(euros):
-        pesetas = round(pesetas, 2) 
-        euros = round(euros, 2)
-    else:
-        euros = int(euros)
-        pesetas = int(pesetas)
-    await ctx.respond(content = f"¿{euros}€? En mi epoca eso eran {pesetas} pesetas".replace(".", ","))
+    euros = abs(euros)
+    cents = ""
+    pesetas = euros * 166.3860
+    perraGorda = pesetas * 10
+    euros = f"{int(euros):,}" if int(euros) == float(euros) else f"{round(euros, 2):,.2f}"
+    pesetas = f"{int(pesetas):,}" if int(pesetas) == float(pesetas) else f"{round(pesetas, 2):,.2f}"
+    euros = euros.replace(",", "@").replace(".", ",").replace("@", ".")
+    pesetas = pesetas.replace(",", "@").replace(".", ",").replace("@", ".")
+    perraGordaTrunc = int(perraGorda)
+    residuo = round((perraGorda - perraGordaTrunc) * 10)
+    perraGordaTrunc = f"{perraGordaTrunc:,}".replace(",", ".")
+    if residuo >= 5:
+        cents += " con 1 perra chica"
+        residuo -= 5
+    if residuo == 1:
+        cents += f" y {residuo} centimo"
+        residuo -= 1
+    if residuo != 0:
+        cents += f" y {residuo} centimos"
+    
+    await ctx.respond(content = f"¿{euros}€? En mi epoca eso eran {pesetas} pesetas. Es decir, {perraGordaTrunc} perras gordas{cents}.")
 
 
 def run(token):
